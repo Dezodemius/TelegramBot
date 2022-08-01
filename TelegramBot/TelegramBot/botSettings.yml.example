@@ -1,2 +1,2 @@
-﻿setting:
-    -token: # token
+﻿token: # token
+connectionString: # connection string

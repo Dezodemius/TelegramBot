@@ -1,4 +1,4 @@
-﻿namespace TelegramBot.Configuration;
+﻿namespace Common.Settings;
 
 /// <summary>
 /// Настройки приложения.
@@ -13,5 +13,5 @@ public class AppSettings
   /// <summary>
   /// Строка подключения к БД.
   /// </summary>
-  public string SqlConnectionString { get; set; }
+  public string ConnectionString { get; set; }
 }

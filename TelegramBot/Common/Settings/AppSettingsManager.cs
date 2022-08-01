@@ -1,7 +1,6 @@
-﻿using System.IO;
-using YamlDotNet.Serialization.NamingConventions;
+﻿using YamlDotNet.Serialization.NamingConventions;
 
-namespace TelegramBot.Configuration;
+namespace Common.Settings;
 
 /// <summary>
 /// Менеджер конфига приложения.

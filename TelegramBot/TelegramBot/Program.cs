@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Threading;
-using TelegramBot.Configuration;
+using Common.Settings;
 
 namespace TelegramBot
 {
@@ -15,8 +15,7 @@ namespace TelegramBot
     /// <param name="args">Аргументы командной строки.</param>
     public static void Main(string[] args)
     {
-      var token = new BotConfigManager().GetSettings().Token;
-      var botManager = new TelegramBotManager(token);
+      var botManager = new TelegramBotManager(AppSettingsManager.Settings.Token);
 
       var cts = new CancellationTokenSource();
       botManager.StartBot(cts.Token);

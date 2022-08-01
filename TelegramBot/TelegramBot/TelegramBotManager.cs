@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Threading;
 using System.Threading.Tasks;
+using Common.Settings;
+using HomeworkService.DatabaseProvider;
 using Newtonsoft.Json;
 using Telegram.Bot;
 using Telegram.Bot.Polling;
@@ -40,6 +42,7 @@ public class TelegramBotManager
       var message = update.Message;
       if (message.Text.ToLower() == "/start")
       {
+        using var dbContext = new DatabaseContext(AppSettingsManager.Settings.ConnectionString);
         await botClient.SendTextMessageAsync(message.Chat, "Добро пожаловать на борт, добрый путник!", cancellationToken: cancellationToken);
         return;
       }

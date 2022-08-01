@@ -2,6 +2,12 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TelegramBot", "TelegramBot\TelegramBot.csproj", "{D2167228-37E0-4D77-9188-094C98BCE14D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HomeworkService", "HomeworkService\HomeworkService.csproj", "{0E5BFDF5-E8C3-453F-90B5-0D02856CD475}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Schedule", "Schedule\Schedule.csproj", "{62D71FAA-56BC-47C6-B2DA-C14BB34210FE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csproj", "{4C5E35E2-A62A-4A2A-8A97-50757BCF880F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +18,17 @@ Global
 		{D2167228-37E0-4D77-9188-094C98BCE14D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D2167228-37E0-4D77-9188-094C98BCE14D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D2167228-37E0-4D77-9188-094C98BCE14D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E5BFDF5-E8C3-453F-90B5-0D02856CD475}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E5BFDF5-E8C3-453F-90B5-0D02856CD475}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E5BFDF5-E8C3-453F-90B5-0D02856CD475}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E5BFDF5-E8C3-453F-90B5-0D02856CD475}.Release|Any CPU.Build.0 = Release|Any CPU
+		{62D71FAA-56BC-47C6-B2DA-C14BB34210FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62D71FAA-56BC-47C6-B2DA-C14BB34210FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62D71FAA-56BC-47C6-B2DA-C14BB34210FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62D71FAA-56BC-47C6-B2DA-C14BB34210FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C5E35E2-A62A-4A2A-8A97-50757BCF880F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C5E35E2-A62A-4A2A-8A97-50757BCF880F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C5E35E2-A62A-4A2A-8A97-50757BCF880F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C5E35E2-A62A-4A2A-8A97-50757BCF880F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

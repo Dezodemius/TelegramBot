@@ -1,0 +1,64 @@
+--
+-- File generated with SQLiteStudio v3.3.3 on Яэ рту 1 21:03:15 2022
+--
+-- Text encoding used: System
+--
+PRAGMA foreign_keys = off;
+BEGIN TRANSACTION;
+
+-- Table: GROUPS
+DROP TABLE IF EXISTS [GROUPS];
+
+CREATE TABLE [GROUPS] (
+    ID        INTEGER      PRIMARY KEY AUTOINCREMENT
+                           UNIQUE
+                           NOT NULL,
+    GROUP_ID  STRING (40)  UNIQUE
+                           NOT NULL,
+    GROUPNAME STRING (120) NOT NULL
+);
+
+
+-- Table: HOMETASKS
+DROP TABLE IF EXISTS HOMETASKS;
+
+CREATE TABLE HOMETASKS (
+    ID        INTEGER     PRIMARY KEY AUTOINCREMENT
+                          UNIQUE
+                          NOT NULL,
+    TASKID    STRING (40) UNIQUE
+                          NOT NULL,
+    TEXT      TEXT,
+    STARTDATE DATETIME    NOT NULL,
+    DUETIME   DATETIME
+);
+
+
+-- Table: HOMETASKS_FOR_STUDENTS
+DROP TABLE IF EXISTS HOMETASKS_FOR_STUDENTS;
+
+CREATE TABLE HOMETASKS_FOR_STUDENTS (
+    STUDENTID STRING   REFERENCES STUDENTS (STUDENT_ID),
+    TASKID    STRING   REFERENCES HOMETASKS (TASKID),
+    GRADE     INT,
+    CHECKDATE DATETIME
+);
+
+
+-- Table: STUDENTS
+DROP TABLE IF EXISTS STUDENTS;
+
+CREATE TABLE STUDENTS (
+    ID         INTEGER      PRIMARY KEY AUTOINCREMENT
+                            UNIQUE
+                            NOT NULL,
+    STUDENT_ID STRING (40)  UNIQUE
+                            NOT NULL,
+    FULLNAME   STRING (120) NOT NULL,
+    NICKNAME   STRING (40),
+    [GROUP]    STRING       REFERENCES [GROUPS] (GROUP_ID) 
+);
+
+
+COMMIT TRANSACTION;
+PRAGMA foreign_keys = on;

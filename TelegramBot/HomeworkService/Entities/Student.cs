@@ -16,17 +16,12 @@ public class Student
   public string FullName { get; set; }
 
   /// <summary>
-  /// Группа студента.
-  /// </summary>
-  public Group Group { get; set;  }
-
-  /// <summary>
-  /// Домашние задания студента.
-  /// </summary>
-  public List<HomeTask> HomeworkTasks { get; set; }
-
-  /// <summary>
   /// Никнейм студента.
   /// </summary>
   public string Nickname { get; set; }
+
+  /// <summary>
+  /// Группа студента.
+  /// </summary>
+  public Group Group { get; set;  }
 }

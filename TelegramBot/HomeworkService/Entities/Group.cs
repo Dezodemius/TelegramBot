@@ -13,7 +13,7 @@ public class Group
   /// <summary>
   /// Название группы.
   /// </summary>
-  public string GroupName { get; set; }
+  public string Name { get; set; }
 
   /// <summary>
   /// Организация, в которой обучается группа.

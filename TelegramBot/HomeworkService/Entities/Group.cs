@@ -19,4 +19,16 @@ public class Group
   /// Организация, в которой обучается группа.
   /// </summary>
   public string Organization { get; set; }
+
+  /// <summary>
+  /// Конструктор.
+  /// </summary>
+  /// <param name="name">Название группы.</param>
+  /// <param name="organization">Организация</param>
+  public Group(string name, string organization = "defaultOrganization")
+  {
+    Id = Guid.NewGuid();
+    Name = name;
+    Organization = organization;
+  }
 }

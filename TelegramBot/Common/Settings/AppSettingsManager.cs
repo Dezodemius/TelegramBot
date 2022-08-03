@@ -28,6 +28,8 @@ public static class AppSettingsManager
   /// <returns>Настройки.</returns>
   private static AppSettings GetSettings()
   {
+    if (!configFile.Exists)
+      throw new FileNotFoundException($"File \"{configFile.FullName}\" not found.");
     var deserializer = new YamlDotNet.Serialization.DeserializerBuilder()
       .IgnoreUnmatchedProperties()
       .WithNamingConvention(CamelCaseNamingConvention.Instance)

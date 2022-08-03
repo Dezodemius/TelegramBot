@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Threading;
 using System.Threading.Tasks;
 using Common.Settings;
@@ -40,13 +40,29 @@ public class TelegramBotManager
     if(update.Type == UpdateType.Message)
     {
       var message = update.Message;
-      if (message.Text.ToLower() == "/start")
+      switch (message.Text.ToLower())
       {
-        using var dbContext = new DatabaseContext(AppSettingsManager.Settings.ConnectionString);
-        await botClient.SendTextMessageAsync(message.Chat, "Добро пожаловать на борт, добрый путник!", cancellationToken: cancellationToken);
-        return;
+        case BotCommand.Start:
+        {
+          await using var dbContext = new HomeworkDbContext(AppSettingsManager.Settings.ConnectionString);
+          await botClient.SendTextMessageAsync(message.Chat, "Добро пожаловать на борт, добрый путник!", cancellationToken: cancellationToken);
+          break;
+        }
+        case BotCommand.AddGroup:
+        {
+        }
+        case BotCommand.AddStudent:
+        {
+          break;
+        }
+        case BotCommand.AddHomework:
+        {
+          break;
+        }
+        default:
+          await botClient.SendTextMessageAsync(message.Chat, "Я не знаю такой команды.", cancellationToken: cancellationToken);
+          break;
       }
-      await botClient.SendTextMessageAsync(message.Chat, "Привет-привет!!", cancellationToken: cancellationToken);
     }
   }
 
